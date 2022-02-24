@@ -1,0 +1,12 @@
+Sure. When we have a collection of items in a container such as an array, these items are accessed by their position in the array.
+These positions start at 0 and go trough the number of elements in the array -1.
+
+So, if an array has 10 elements, the elements would be accessed with indexes (positions) 0 through 9.
+
+Now suppose we wanted to access the 12th element ? There is NO 12th element in the array.
+
+So how is this handled?
+
+Some languages do bounds checking. That means that before the 12th elements is attempted to be accessed, a check is done to be sure that there is indeed a 12th element. If there is not, then some sort of error or exception occurs. If there is a 12th element, then the programs continues as normal.
+
+This checking to determine if a position is within bounds takes code to execute behind the scenes. The C++ developers chose NOT do do bounds checking on arrays to provide maximum. SO, the decision is left to us programmers whether we want to d bounds checking and if so then we do it ourselves.

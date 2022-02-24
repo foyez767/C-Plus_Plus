@@ -1,0 +1,22 @@
+I was also curious about this when i was learning about main function and i found this answer in Q/A Hope this will help you.
+
+***why use return 0?
+
+ANSWER->main can return any integer since we declared as:
+
+int main()
+
+
+
+Returning an integer from main returns it to the who ever called main. In most cases this is the OS(Operating System). Zero tells the OS that program completed normally.
+
+When we return any other integer it usually is some  sort of error code that tells the caller that something went wrong. For example, suppose we have 2 programs that run sequentially. The first creates a  file with some data and the second processes that data. If the first program returns a zero then the second program knows that the first program completed successfully.  However, if the first program returns a 1, that might tell the second program that  the first program could not create the data file and it will not run. We can return all sorts of error codes this way.
+
+As to the second part of your question: The C++ standard doesn't require a function to return a value even though is says  it will in the declaration. by default it will return 0 if you will no specify.
+
+So no  compile-time error is generated. However, most  compilers will produce a warning message about it.
+
+
+
+Best practice is to return values from a function that says it will. So main should return an integer.
+
