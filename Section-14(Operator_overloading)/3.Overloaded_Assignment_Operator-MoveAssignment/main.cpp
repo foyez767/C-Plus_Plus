@@ -1,6 +1,6 @@
 #include<iostream>
 #include<vector>
-#include "Mystring.cpp"
+#include "Mystring.h"
 
 int main(){
 
