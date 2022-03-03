@@ -53,7 +53,7 @@ bool Player::operator==(const Player &rhs) const {
                 return true;
         }
     }
-return 0;   //"control reaches end of non-void function"- to fix this warning
+return false;   
 }
 
 //Increment by operator overloading
