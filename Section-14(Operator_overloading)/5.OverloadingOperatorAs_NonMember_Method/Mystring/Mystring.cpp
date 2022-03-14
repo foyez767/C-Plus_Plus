@@ -54,53 +54,54 @@ Mystring &Mystring::operator=(Mystring &&rhs){
      
     return *this;
 }
-//convert upper case
-Mystring Mystring::operator+() const{
-    size_t size = strlen(this->str);
-    char *string=new char [size+1];
+//UPPERCASE
+Mystring operator+(const Mystring &obj){
+    size_t size {strlen(obj.str)};
+    char *string =new char [size+1];
+    strcpy(string,obj.str);
 
     for(size_t i {0};i<size;i++){
-        string [i]=toupper(this->str [i]);
+        string[i]=toupper(string[i]);
     }
+    Mystring temp {string};
+    delete [] string;
+
+return temp;
+}
+//convert lowercase
+Mystring operator-(const Mystring &obj){
+    size_t size {strlen(obj.str)};
+    char *string =new char [size+1];
+    strcpy(string,obj.str);
+
+    for(size_t i {0};i<size;i++){
+        string[i]=tolower(string[i]);
+    }
+
     Mystring temp {string};
     delete [] string;
 return temp;
 }
-//convert to lowercase
-Mystring Mystring::operator-() const{
-    size_t size {strlen(this->str)};
-    char *string=new char [size+1];     //extra 1 for null terminator
-
-    for(size_t i {0};i<size;i++)
-        string[i]=tolower(this->str[i]);
-
-    Mystring temp {string};
-    delete [] string;
-
-    return temp;
-}
 //compare two object
-bool Mystring::operator==(const Mystring rhs) const{
-if(strcmp(this->str,rhs.str)==0)
+bool operator==(const Mystring &lhs,const Mystring &rhs){
+
+if(strcmp(lhs.str,rhs.str)==0)
     return true;
 else
     return false;
-
 }
-//Concatanate
-Mystring Mystring::operator+(const Mystring rhs) const{
+//Concatenate two object
+Mystring operator+(const Mystring &lhs,const Mystring &rhs){
+    size_t size {strlen(lhs.str)+strlen(rhs.str)};
+    char *string =new char [size+1];
 
-    size_t size {strlen(this->str)+strlen(rhs.str)+1};
-    char *string=new char [size+1];
-    strcpy(string,this->str);
+    strcpy(string,lhs.str);
     strcat(string,rhs.str);
 
     Mystring temp {string};
     delete [] string;
-
-    return temp;
+return temp; 
 }
-
 //Methods
 void Mystring::display() const {
     std::cout<<str<<":"<<get_length()<<std::endl;

@@ -25,7 +25,7 @@ class Student{
     //decrementing attributes
     Student operator-();
     //sum of two object attributes[suppose in our class '*' this sign represent sum(+)]
-    Student operator*(const Student rhs) const;
+    Student operator+(const Student rhs) const;
 
     //Methods
     void display();

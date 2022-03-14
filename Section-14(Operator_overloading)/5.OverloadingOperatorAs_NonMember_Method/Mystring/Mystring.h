@@ -1,8 +1,13 @@
 #ifndef MYSTRING_H
 #define MYSTRING_H
 
+
 class Mystring
 {
+    friend Mystring operator+(const Mystring &obj); //uppercase
+    friend Mystring operator-(const Mystring &obj); //lowercase
+    friend bool operator==(const Mystring &lhs,const Mystring &rhs);    //compare two object
+    friend Mystring operator+(const Mystring &lhs,const Mystring &rhs); //concatenate two object
 private:
     char *str;  //pointer to a char[] that holds C style string
 public:
@@ -15,12 +20,6 @@ public:
     Mystring &operator=(const Mystring &rhs);
     //Move assignment
     Mystring &operator=(Mystring &&rhs);
-    //Overloading Operator
-    Mystring operator+() const;                     //uppercase
-    Mystring operator-() const;                     //lowercase
-    bool operator==(const Mystring rhs) const;      //compare two object
-    bool operator!=(const Mystring rhs) const;
-    Mystring operator+(const Mystring rhs) const;   //concate two object
     //Methods
     void display() const;
     int get_length() const;

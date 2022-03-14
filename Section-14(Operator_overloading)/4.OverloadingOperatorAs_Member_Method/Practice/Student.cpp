@@ -56,6 +56,7 @@ bool Student::operator==(const Student rhs) const{
     }
 return false;
 }
+
 //incrementing class attributes
 Student &Student::operator+() {
 a=a+1;
@@ -71,7 +72,7 @@ Student Student::operator-(){
     return *this;
 }
 //sum of two object attributes***[suppose in our class '*' this sign represent sum(+)]
-Student Student::operator*(const Student rhs) const {
+Student Student::operator+(const Student rhs) const {
 int sum_a=(this->a)+(rhs.a);
 int *sum_b=new int; //allocating space for sum_b
 *sum_b=(*b)+(*rhs.b);
