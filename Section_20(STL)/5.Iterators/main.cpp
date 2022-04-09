@@ -70,6 +70,7 @@ void test3(){
     
     // while(it != vec.end()){
     //     *it=0;
+    //      it++;
     // }
     /*when we try to change the value of vector elements ,we get an error ,it is because before we
     declare that this iterator is a constant and so it does not have ability to change the value of
@@ -126,13 +127,24 @@ void test5(){
 
 }
 
+void test6(){
+    //using for loop to display all vector elements with iterators
+    vector<int>vec{1,2,3,4,5};
+
+    vector<int>::iterator i;
+    for(i=vec.begin();i<vec.end();i++){
+        cout<<*i<<" ";
+    }
+}
+
 int main(){
 
-    test1();
+    // test1();
     // test2();
     // test3();
     // test4();
     // test5();
+    // test6();
 
     return 0;
 }

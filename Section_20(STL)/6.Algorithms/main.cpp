@@ -27,10 +27,10 @@ void count_test(){
 
 }
 
-//Returns the number of elements in the range [first, last) satisfying specific criteria.
+//Returns the number of elements in the range [first, last] satisfying specific criteria.
 void count_if_test(){
     std::vector<int>vec {1,2,3,4,5,2,1,6,8,9,7,5};
-    //using lamda expression to count how many elements are divisible by 2/even
+    //using lamda expression to count how many elements are divisible by 2 or even
     int num=count_if(vec.begin(),vec.end(),[](int x){ return x%2==0;});
     std::cout<<num<<" numbers are divisible by 2"<<std::endl;   //5
 
@@ -74,17 +74,25 @@ void all_of_test(){
     else
         std::cout<<"All elements are less than 10"<<std::endl;
     
+    //now check if no one satisfy the condition
+    if(none_of(vec.begin(),vec.end(),[](int x){ return x>20;}));
+        std::cout<<"All elements are less than 20"<<std::endl;
+    
 }
 
 //transform elements in a container
 void transform_test(){
-    std::string str {"c++ programming"};
+    std::string str {"c++ ProGRamminG"};
 
     std::cout<<"Before transform: "<<str<<std::endl;
 
     std::transform(str.begin(),str.end(),str.begin(),::toupper);
 
     std::cout<<"After transform: "<<str<<std::endl;
+
+    std::transform(str.begin(),str.end(),str.begin(),::tolower);
+
+    std::cout<<"After transforming :"<<str<<std::endl;
 }
 
 

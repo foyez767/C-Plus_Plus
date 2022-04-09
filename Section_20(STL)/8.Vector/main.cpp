@@ -167,6 +167,9 @@ void test9(){
     if(it != vec1.end()){
         std::cout<<"Inserting....."<<std::endl;
         vec1.insert(it,vec2.begin(),vec2.end());
+        // vec1.insert(it,10,200);
+        // vec1.insert(it,10);
+
 
     }else{
         std::cout<<"Sorry! 5 not found in vec1"<<std::endl;
@@ -176,6 +179,91 @@ void test9(){
     display(vec2);
 
 
+}
+
+void test10(){
+    std::vector<int>vec {1,2,1,3,1,3,4,1,2,10,2,30,34,12,14};
+
+    int count=std::count(vec.begin(),vec.end(),1);
+
+    std::cout<<"Found "<<count<<" times 1"<<std::endl;
+
+    int count2=std::count_if(vec.begin(),vec.end(),[](int x){ return x>10;});
+
+    std::cout<<"There are "<<count2<<" numbers which are greater than 10"<<std::endl;
+}
+
+void test11(){
+    std::vector<int>vec{1,2,3,1,4,5,2,1};
+    display(vec);
+
+    std::replace(vec.begin(),vec.end(),1,100);
+    display(vec);
+}
+
+void test12(){
+    std::vector<int>vec{10,12,13,10,2,3,5,8};
+
+    if(std::all_of(vec.begin(),vec.end(),[](int x){ return x>0;}))
+        std::cout<<"All numbers are positive"<<std::endl;
+    else
+        std::cout<<"There are negative numbers"<<std::endl;
+    
+    std::vector<int>vec2 {10,2,1,34,-2,100};
+
+    if(std::any_of(vec2.begin(),vec2.end(),[](int x){ return x<0;}))
+        std::cout<<"There are negative numbers"<<std::endl;
+    else
+        std::cout<<"All numbers are positive"<<std::endl;
+
+}
+
+void test13(){
+    std::vector<int> vec {1,2,3,4,5};
+    display(vec);
+
+    std::reverse(vec.begin(),vec.end());
+    display(vec);
+    
+}
+
+void test14(){
+    std::vector<int>vec {1,2,3,4,5};
+
+    std::cout<<"First element of vec: "<<vec.front()<<std::endl;
+    std::cout<<"Last element of vec: "<<vec.back()<<std::endl;
+}
+
+void test15(){
+    std::vector<int>vec{1,2,3,4,5};
+
+    int *ptr=vec.data();
+    *ptr=1000;
+    display(vec);
+}
+
+void test16(){
+    std::vector<int> vec;
+    std::cout<<std::boolalpha;
+
+    if(vec.empty())
+        std::cout<<"Container is empty"<<std::endl;
+    else
+        std::cout<<"Container is not empty"<<std::endl;
+}
+
+void test17(){
+    std::vector<int>vec {1,2,3};
+    display(vec);
+
+    vec.resize(5);  
+    display(vec);
+
+    vec.resize(2);
+    display(vec);
+
+    vec.resize(5,100);
+    display(vec);
 }
 
 int main(){
@@ -188,6 +276,16 @@ int main(){
     // test7();
     // test8();
     // test9();
+    // test10();
+    // test11();
+    // test12();
+    test13();
+    // test14();
+    // test15();
+    // test16();
+    // test17();
+
+
 
 
     return 0;
