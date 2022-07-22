@@ -85,6 +85,11 @@ void test4(){
         else 
             it++;
     }
+    // for(int i=0;i<vec.size();i++){
+    //     if(vec[i]%2==0){
+    //         vec.erase(vec.begin()+i);
+    //     }
+    // }
 
     display(vec);
 }
@@ -279,9 +284,9 @@ int main(){
     // test10();
     // test11();
     // test12();
-    test13();
+    // test13();
     // test14();
-    // test15();
+    test15();
     // test16();
     // test17();
 
