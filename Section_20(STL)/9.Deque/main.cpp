@@ -6,7 +6,7 @@ using namespace std;
 
 //using a template function to display any deque
 template<typename T>
-void display(std::deque<T> d){
+void display(deque<T> d){
     cout<<"[ ";
     for(auto v:d){
         cout<<v<<" ";
@@ -16,7 +16,7 @@ void display(std::deque<T> d){
 }
 
 void test1(){
-    std::deque<int> d {1,2,3,4,5};
+    deque<int> d {1,2,3,4,5};
     display(d);
 
     d={100,200,300,400};
