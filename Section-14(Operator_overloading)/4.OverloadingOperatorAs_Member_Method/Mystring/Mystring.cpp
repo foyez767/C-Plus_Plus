@@ -80,7 +80,7 @@ Mystring Mystring::operator-() const{
     return temp;
 }
 //compare two object
-bool Mystring::operator==(const Mystring rhs) const{
+bool Mystring::operator==(const Mystring &rhs) const{
 if(strcmp(this->str,rhs.str)==0)
     return true;
 else
@@ -88,7 +88,7 @@ else
 
 }
 //Concatanate
-Mystring Mystring::operator+(const Mystring rhs) const{
+Mystring Mystring::operator+(const Mystring &rhs) const{
 
     size_t size {strlen(this->str)+strlen(rhs.str)+1};
     char *string=new char [size+1];

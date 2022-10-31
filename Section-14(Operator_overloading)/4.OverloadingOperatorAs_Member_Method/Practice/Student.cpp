@@ -30,9 +30,9 @@ if(this==&rhs)
 
 delete this->b;
 
-a=rhs.a;
-b=new int;
-*b=*rhs.b;
+this->a=rhs.a;
+this->b=new int;
+*(this->b)=*rhs.b;
 
 return *this;
 }
@@ -49,7 +49,7 @@ rhs.b=nullptr;
 return *this;
 }
 //Compare two object
-bool Student::operator==(const Student rhs) const{
+bool Student::operator==(const Student &rhs) const{
     if(this->a==rhs.a){
         if(*b==*(rhs.b))
             return true;
@@ -71,12 +71,11 @@ Student Student::operator-(){
 
     return *this;
 }
-//sum of two object attributes***[suppose in our class '*' this sign represent sum(+)]
-Student Student::operator+(const Student rhs) const {
+//sum of two object attributes
+Student Student::operator+(const Student &rhs) const {
 int sum_a=(this->a)+(rhs.a);
 int *sum_b=new int; //allocating space for sum_b
 *sum_b=(*b)+(*rhs.b);
-
 Student temp(sum_a,*sum_b);
 
 return temp;

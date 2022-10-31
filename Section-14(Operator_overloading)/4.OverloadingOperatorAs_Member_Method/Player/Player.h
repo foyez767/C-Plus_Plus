@@ -28,7 +28,6 @@ class Player{
     Player &operator=(Player &&rhs);
     //compareing two object attrubutes by opeerator overloading
     bool operator==(const Player &rhs) const;
-    Player &operator+();
     //Methods
     void display();
 

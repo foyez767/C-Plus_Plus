@@ -18,9 +18,8 @@ public:
     //Overloading Operator
     Mystring operator+() const;                     //uppercase
     Mystring operator-() const;                     //lowercase
-    bool operator==(const Mystring rhs) const;      //compare two object
-    bool operator!=(const Mystring rhs) const;
-    Mystring operator+(const Mystring rhs) const;   //concate two object
+    bool operator==(const Mystring &rhs) const;      //compare two object
+    Mystring operator+(const Mystring &rhs) const;   //concate two object
     //Methods
     void display() const;
     int get_length() const;

@@ -16,24 +16,24 @@ int main(){
 // b.operator=(MyString("This is a test")); */
 
 //     b="You are the best";   //we are creating a temporary object first using overloaded constructor and then we are
-//     //assigning this temporary object to b using copy assignment
+    //assigning this temporary object to b using copy assignment
 
 
 //*************************************
-Mystring empty; //No-args Constructor
-Mystring larry {"larry"};   //overloaded constructor
-Mystring stooge(larry); //Deep copy constructor
-Mystring stooges;   //No args constructor
+// Mystring empty; //No-args Constructor
+// Mystring larry {"larry"};   //overloaded constructor
+// Mystring stooge(larry); //Deep copy constructor
+// Mystring stooges;   //No args constructor
 
-empty=stooge;   //Copy assignment
+// empty=stooge;   //Copy assignment
 
-empty.display();
-larry.display();
-stooge.display();
-empty.display();
+// empty.display();
+// larry.display();
+// stooge.display();
+// empty.display();
 
-stooges="Larry,Moe and Curly";  //Overloaded constructor for temporary object then Copy assignment for assigning
-stooges.display();
+// stooges="Larry,Moe and Curly";  //Overloaded constructor for temporary object then Copy assignment for assigning
+// stooges.display();
 
 
 //******************************

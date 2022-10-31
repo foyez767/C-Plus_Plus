@@ -22,8 +22,6 @@ int main(){
     Mystring stooges=larry+"Moe";
     stooges.display();
 
-    Mystring stooges2="Moe"+larry;  //Ok with non member function
-    stooges2.display();
 
     Mystring three_stooges=larry+" "+moe+" "+"Curly";
     three_stooges.display();

@@ -1,13 +1,13 @@
 #include<iostream>
 #include<vector>
-#include "Mystring.h"
+#include "Mystring.cpp"
 
 int main(){
 
-    Mystring a {"Hello"};   //overloaded constructor for creating object
-    a=Mystring {"Hola"};    //overloaded constructor for creating temporary object,then move assignment for assigning temporary object to a,
-                            //  then destructor for destroying temporary object
-    a="Foyez";  //constructing temporary object bassed on string "Foyez",then assign temporary object using move assignment
+    // Mystring a {"Hello"};   //overloaded constructor for creating object
+    // a=Mystring {"Hola"};    //overloaded constructor for creating temporary object,then move assignment for assigning temporary object to a,
+    //                         //  then destructor for destroying temporary object
+    // a="Foyez";  //constructing temporary object bassed on string "Foyez",then assign temporary object using move assignment
                 //then destructor for deleting temporary object
 
 //     //***************************
@@ -28,24 +28,24 @@ int main(){
 
 
 //******************************
-// std::vector<Mystring>stooges_vec;
+std::vector<Mystring>stooges_vec;
 
-// stooges_vec.push_back("Larray");    //Overloded constructor for creating temporary object ,then move constructor for moving  temporary object resoucces and then destructor for deallocate memory 
-// stooges_vec.push_back("Moe");
-// stooges_vec.push_back("Curly");
+stooges_vec.push_back("Larray");    //Overloded constructor for creating temporary object ,then move constructor for moving  temporary object resoucces and then destructor for deallocate memory 
+stooges_vec.push_back("Moe");
+stooges_vec.push_back("Curly");
 
-// std::cout<<"===============lopp-1==========="<<std::endl;
-// for(const Mystring &s:stooges_vec)
-//     s.display();
+std::cout<<"===============lopp-1==========="<<std::endl;
+for(const Mystring &s:stooges_vec)
+    s.display();
 
-// std::cout<<"===============lopp-2==========="<<std::endl;
-// for(Mystring &s:stooges_vec)
-//     s="Changed";    //constructor for creating temporary object based on string "Changed" ,then move assignment 
-//     //for assigning temporary object to s and then destructor for deallocate memory
+std::cout<<"===============lopp-2==========="<<std::endl;
+for(Mystring &s:stooges_vec)
+    s="Changed";    //constructor for creating temporary object based on string "Changed" ,then move assignment 
+    //for assigning temporary object to s and then destructor for deallocate memory
 
-// std::cout<<"===============lopp-3==========="<<std::endl;
-// for(const Mystring &s:stooges_vec)
-//     s.display();
+std::cout<<"===============lopp-3==========="<<std::endl;
+for(const Mystring &s:stooges_vec)
+    s.display();
 
     return 0;
 }

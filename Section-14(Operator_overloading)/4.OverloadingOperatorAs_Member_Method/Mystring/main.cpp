@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Mystring.h"
+#include "Mystring.cpp"
 
 int main(){
     std::cout<<std::boolalpha;
@@ -11,7 +11,6 @@ int main(){
     moe.display();
 
     std::cout<<(larry==moe)<<std::endl;
-    std::cout<<(larry != moe)<<std::endl;
     std::cout<<(stooge==larry)<<std::endl;
 
     Mystring larry2=-larry;

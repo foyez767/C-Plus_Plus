@@ -14,7 +14,7 @@ public:
     Mystring();     //No-arg constructor
     Mystring(const char *s);    //overloaded constructor
     Mystring(const Mystring &source);   //copy constructor
-    Mystring(Mystring &&source);    //Move constructor
+    Mystring(Mystring &&source);        //Move constructor
     ~Mystring();    //destructor
     //Copy assignment 
     Mystring &operator=(const Mystring &rhs);

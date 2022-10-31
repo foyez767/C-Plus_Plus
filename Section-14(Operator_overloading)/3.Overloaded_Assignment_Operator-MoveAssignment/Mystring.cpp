@@ -56,8 +56,8 @@ if(this==&rhs)
     return *this;
 
 delete [] this->str;
-str=rhs.str;
 
+str=rhs.str;
 rhs.str=nullptr;
 return *this;
 }

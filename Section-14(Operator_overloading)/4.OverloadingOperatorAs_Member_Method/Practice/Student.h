@@ -19,13 +19,13 @@ class Student{
     //Move assignment
     Student &operator=(Student &&rhs);
     //compare object
-    bool operator==(const Student rhs) const;
+    bool operator==(const Student &rhs) const;
     //incrementing attribute
     Student &operator+();
     //decrementing attributes
     Student operator-();
-    //sum of two object attributes[suppose in our class '*' this sign represent sum(+)]
-    Student operator+(const Student rhs) const;
+    //sum of two object attributes
+    Student operator+(const Student &rhs) const;
 
     //Methods
     void display();

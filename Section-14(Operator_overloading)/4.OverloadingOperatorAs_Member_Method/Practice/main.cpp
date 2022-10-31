@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Student.h"
+#include "Student.cpp"
 
 int main(){
     Student empty;  //No arg constructor
@@ -32,7 +32,7 @@ int main(){
     std::cout<<(foyez==foyezs)<<std::endl;
 
     
-    Student sum_of_attributes=foyez+frank; //[suppose in our class '*' this sign represent sum(+)]
+    Student sum_of_attributes=foyez+frank; 
     sum_of_attributes.display();
 
     

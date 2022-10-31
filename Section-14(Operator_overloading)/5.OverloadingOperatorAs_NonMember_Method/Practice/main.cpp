@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Number.h"
+#include "Number.cpp"
 
 int main(){
     Number foyez {10,20};
@@ -9,6 +9,6 @@ int main(){
     std::cout<<(foyez==frank);
     Number sum ;
     sum=foyez+frank;
-
+    
     return 0;
 }
